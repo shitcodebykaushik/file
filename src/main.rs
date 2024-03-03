@@ -6,7 +6,7 @@ fn main() -> std::io::Result<()> {
     let file_name = "large_file.txt";
     let num_lines = 500_000;
     let target_word = "Rust";
-    let other_words = ["Python", "Java", "C++", "JavaScript", "Go", "Swift", "Kotlin"];
+    let other_words = ["You guys are "];
 
     let content: String = (0..num_lines)
         .map(|i| {
@@ -15,7 +15,7 @@ fn main() -> std::io::Result<()> {
             } else {
                 other_words[i % other_words.len()]
             };
-            format!("{} is a programming language.\n", word)
+            format!("{} are using best programming language.\n", word)
         })
         .collect();
 
